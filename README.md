@@ -1,9 +1,11 @@
 # Folketingets partiers principprogrammer
-
-## Sentiments
 Dette projekt handler om at bruge partiernes princip-programmer til at forstå forskelle og ligheder mellem dem.
 
-Som det første bruger vi den danske AFINN liste til at få sentiment scores på alt teksten. Et rullende gennemsnit af sentiments over 50 ord viser for De Radikale tydelige tegn på at partiet behandler forskellige politiske emner samlet i deres program.
+## Data
+De fleste af partierne gør deres gældende principprogrammer tilgængelige som pdf'er via deres hjemmeside. For de partier hvor dette gælder er pdf'erne læst direkte ind i R med pakken `pdftools`. Enhedslisten og Radikale har udelukkende deres programmer tilgængelige som html-sider, så i disse tilfælde er det nødvendigt at copy-paste tekst og gemme som pdf i Word (ikke optimalt).
+
+## Sentiments
+Som det første bruger vi den danske AFINN liste til at få sentiment scores på teksterne. Et rullende gennemsnit af sentiments over 50 ord viser for De Radikale tydelige tegn på at partiet behandler forskellige politiske emner samlet i deres program.
 
 <p align="center">
 <img src="figs/avg_sent_page.png" alt="GDP plot" width = "60%">
@@ -20,7 +22,7 @@ På lignende vis kan vi løbende summere hvert dokuments samlede sentiment score
 
 Hvilke ord partierne skriver mest i deres programmer (målt i forhold til programmets samlede længde) er ikke tilfældigt. At to partier nævner ord lige meget er til gengæld en god indikator på at partierne kan blive enige om disse emner i folketingssalen.
 
-I de følgende plots markerer den stiplede linje en 45-graders linje, og nu tættere ordende ligger på denne linje, nu ens er partierne i deres brug af ordet.
+I de følgende plots markerer den stiplede linje en 45-graders linje, og nu tættere ordende ligger på denne linje, nu mere ens er partierne i deres brug af ordet.
 
 For S og V samler de fleste punkter sig omkring midten, men med betydelig spredning - muligvis fordi partierne bekymrer sig om de samme områder, men har forskellige holdninger dertil.
 
